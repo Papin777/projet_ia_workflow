@@ -25,7 +25,7 @@ y = data.target
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=TEST_SIZE, random_state=RANDOM_STATE)
 
 # Créer et entraîner le modèle de régression logistique
-model = LogisticRegression(max_iter=MAX_ITER)
+model = LogisticRegression(max_iter=MAX_ITER, solver='liblinear')
 model.fit(X_train, y_train)
 
 # Prédictions et évaluation
